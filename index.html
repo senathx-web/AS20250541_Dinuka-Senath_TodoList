@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List</title>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                My To-Do List
+            </a>         
+        </div>
+    </nav>
+
+
+    <!-- Main Section -->
+    <main class="container main-container">
+
+        <div class="todo-card">
+
+            <!-- Page Heading -->
+            <div class="text-center mb-4">
+                <h1>Task Manager</h1>
+                <p class="subtitle">
+                    Organize your tasks and stay focused.
+                </p>
+            </div>
+
+
+            <!-- Task Input -->
+            <div class="input-group mb-2">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    class="form-control"
+                    placeholder="What needs to be done?"
+                    aria-label="Enter a new task"
+                >
+
+                <button
+                    class="btn add-btn"
+                    id="addTaskBtn"
+                    type="button">
+                    + Add Task
+                </button>
+
+            </div>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="error-message"></p>
+
+
+            <!-- Task Information -->
+            <div class="task-info">
+
+                <p id="taskCounter">
+                    0 tasks remaining
+                </p>
+
+                <button
+                    id="clearCompletedBtn"
+                    class="clear-btn"
+                    type="button">
+                    Clear Completed
+                </button>
+
+            </div>
+
+
+            <!-- Task Filters -->
+            <div class="filter-container">
+
+                <button
+                    class="filter-btn active-filter"
+                    data-filter="all">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="active">
+                    Active
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- Task List -->
+            <ul id="taskList" class="task-list">
+
+                <!-- JavaScript will add tasks here -->
+
+            </ul>
+
+
+            <!-- Empty Message -->
+            <p id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task!
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
